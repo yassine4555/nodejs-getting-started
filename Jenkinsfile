@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') { 
             steps { 
                 // Récupère le code source depuis le dépôt Git 
-                git 'https://github.com/votre-utilisateur/votre-depot.git' 
+                git 'https://github.com/yassine4555/nodejs-getting-started' 
             } 
         } 
          
