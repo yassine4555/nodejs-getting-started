@@ -2,9 +2,19 @@ pipeline {
     agent any
     
     stages {
+        stage('Install Node.js') {
+            steps {
+                echo "✓ Installing Node.js..."
+                sh '''
+                    apt-get update
+                    apt-get install -y nodejs npm
+                '''
+            }
+        }
+        
         stage('Install Dependencies') {
             steps {
-                echo "✓ Installing Node.js dependencies..."
+                echo "✓ Installing project dependencies..."
                 sh 'npm install'
             }
         }
